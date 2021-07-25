@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  font-family: monospace;
+}
+
+#left-column,
+#right-column {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+#left-column {
+  justify-content: flex-end;
+}
+
+#right-column {
+  justify-content: flex-start;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+#controllers {
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 20px;
+}
+
+img {
+  margin: 0 20px;
+  object-fit: contain;
+  width: 500px;
+  /*The image-rendering CSS property sets an image scaling algorithm.
+  https://developer.mozilla.org/en-US/docs/Web/CSS/image-rendering*/
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+#pixelSize {
+  height: 30px;
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 30px;
+}
+
+#controllers {
+  padding: 20px;
+  background-color: #333;
+  border-radius: 20px;
+  color: rgb(231, 231, 231);
+}
+
+.art {
+  margin-bottom: 5px;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    overflow-y: scroll;
+  }
+
+  img, #controllers {
+    width: 100%;
+  }
+}
