@@ -106,7 +106,7 @@ for (let i = 0; i < artOptions.length; i += 1) {
 // Handle changing an art
 function changeImageSource(srcName) {
   clearImageElement();
-  img1.src = `https://raw.githubusercontent.com/LiaTsernant/pixel-art/master/assets/${srcName}.jpeg`;
+  img1.src = `https://raw.githubusercontent.com/pixelatedart/pixelatedart.github.io/master/assets/${srcName}.jpeg`;
   img1.onload = function () {
     drawPixels(pixelSize);
   };
